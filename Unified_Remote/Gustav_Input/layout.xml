@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout color="#737374">
+  <grid>
+    <row weight="3">
+      <label id="output" />
+    </row>
+
+    <row weight="4">
+      <button id="b1" text="1" onTap="resp01" />
+      <button id="b2" text="2" onTap="resp02" />
+      <button id="b3" text="3" onTap="resp03" />
+    </row>
+
+    <row weight="4">
+      <button id="b4" text="4" onTap="resp04" />
+      <button id="b5" text="5" onTap="resp05" />
+      <button id="b6" text="6" onTap="resp06" />
+    </row>
+
+    <row weight="4">
+      <button id="b7" text="7" onTap="resp07" />
+      <button id="b8" text="8" onTap="resp08" />
+      <button id="b9" text="9" onTap="resp09" />
+    </row>
+
+    <row weight="4">
+      <button id="b10" text="10" onTap="resp10" />
+      <button id="b11" text="11" onTap="resp11" />
+      <button id="b12" text="12" onTap="resp12" />
+    </row>
+
+    <row weight="4">
+      <button id="b13" text="13" onTap="resp13" />
+      <button id="b14" text="14" onTap="resp14" />
+      <button id="b15" text="15" onTap="resp15" />
+    </row>
+
+  </grid>
+</layout>

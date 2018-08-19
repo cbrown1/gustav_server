@@ -1,0 +1,18 @@
+# Ensure bluetooth daemon is run in compatibility mode to provide deprecated command
+# line interfaces. We're running Bluez5 and we need some Bluez4 functions.
+# source:
+# http://askubuntu.com/questions/775303/unified-remote-bluetooth-could-not-connect-to-sdp
+
+# Start bluetooth to ensure that config file is created
+sudo systemctl start bluetooth
+sudo systemctl stop bluetooth
+
+sudo crudini --set --existing "/etc/systemd/system/bluetooth.target.wants/bluetooth.service" Service ExecStart "/usr/libexec/bluetooth/bluetoothd --compat"
+
+sudo systemctl daemon-reload
+sudo systemctl restart bluetooth
+
+# and you'll also have to change permissions on /var/run/sdp
+
+sudo chmod 777 /var/run/sdp
+
